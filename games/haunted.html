@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>👻 Ghost Hunter Deluxe</title>
+
+    <link rel="stylesheet"
+          href="../css/haunted.css">
+
+</head>
+
+<body>
+
+    <h1>👻 Ghost Hunter Deluxe</h1>
+
+    <!-- Score -->
+
+    <div class="score-box">
+
+        Ghosts Caught:
+        <span id="score">0</span>
+
+    </div>
+
+    <!-- Timer -->
+
+    <div class="timer-box">
+
+        Time:
+        <span id="timer">60</span>s
+
+    </div>
+
+    <!-- Controls -->
+
+    <div class="controls">
+
+        <button onclick="startGame()">
+            ▶ Start Game
+        </button>
+
+        <button onclick="restartGame()">
+            🔄 Restart
+        </button>
+
+        <button onclick="testSound()">
+            🔊 Test Sound
+        </button>
+
+    </div>
+
+    <!-- Game Area -->
+
+    <div class="game-area"
+         id="gameArea">
+
+        <!-- Ghost -->
+
+        <img
+            src="../images/ghost.png"
+            alt="Ghost"
+            class="ghost"
+            id="ghost">
+
+        <!-- Flashlight -->
+
+        <div id="flashlight"></div>
+
+    </div>
+
+    <!-- Instructions -->
+
+    <div class="instructions">
+
+        🔦 Move your flashlight over the ghost.<br>
+        👻 Catch ghosts before time runs out.<br>
+        ⭐ Score as many points as possible.
+
+    </div>
+
+    <!-- Game Over -->
+
+    <div id="gameOverBox"
+         class="game-over"
+         style="display:none;">
+
+        <h2>💀 Game Over!</h2>
+
+        <p>
+
+            Ghosts Caught:
+            <span id="finalScore">0</span>
+
+        </p>
+
+        <button onclick="restartGame()">
+
+            Play Again
+
+        </button>
+
+    </div>
+
+    <!-- AUDIO -->
+
+    <audio id="ghostLaugh" preload="auto">
+        <source
+            src="../sounds/ghost-laugh.mp3"
+            type="audio/mpeg">
+    </audio>
+
+    <audio id="catchSound" preload="auto">
+        <source
+            src="../sounds/catch.mp3"
+            type="audio/mpeg">
+    </audio>
+
+    <audio id="spookyMusic" preload="auto" loop>
+        <source
+            src="../sounds/spooky-music.mp3"
+            type="audio/mpeg">
+    </audio>
+
+    <script src="../js/haunted.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Character</title>
+    <link rel="stylesheet" href="../css/mystery.css">
+<script src="../js/mystery.js"></script>
+
+</head>
+<body>
+
+    <h1>🔍 Mystery Character</h1>
+
+    <div class="game-box">
+
+        <h2>Find the Hidden Character!</h2>
+
+        <div class="clues" id="clues">
+            Loading clues...
+        </div>
+
+        <div class="characters" id="characters">
+            <!-- Characters will be added by JavaScript -->
+        </div>
+
+        <button onclick="newRound()">
+            New Mystery
+        </button>
+
+        <div class="score">
+            Score: <span id="score">0</span>
+        </div>
+
+    </div>
+
+    <script src="../js/mystery.js"></script>
+
+</body>
+</html>

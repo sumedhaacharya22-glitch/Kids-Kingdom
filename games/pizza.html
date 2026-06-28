@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Pizza Shop</title>
+
+    <link rel="stylesheet" href="../css/pizza.css">
+</head>
+
+<body>
+
+    <h1>🐱 Cat Pizza Shop 🍕</h1>
+
+    <!-- Score -->
+
+    <div class="score-board">
+        Score: <span id="score">0</span>
+    </div>
+
+    <!-- Customer Order -->
+
+    <div class="order-box">
+
+        <h2>Customer Order</h2>
+
+        <p id="order">
+            Loading order...
+        </p>
+
+    </div>
+
+    <!-- Pizza Making Area -->
+
+    <div class="pizza-container">
+
+        <div class="pizza-display">
+
+            <img
+                src="../images/pizza-base.png"
+                class="pizza-base"
+                alt="Pizza Base">
+
+            <div id="sauce-layer"></div>
+
+            <div id="cheese-layer"></div>
+
+            <div id="topping-layer"></div>
+
+        </div>
+
+    </div>
+
+    <!-- Sauce Selection -->
+
+    <h2>Add Sauce</h2>
+
+    <div class="ingredient-panel">
+
+        <img
+            src="../images/tomato-sauce.png"
+            class="ingredient-img"
+            onclick="addSauce()">
+
+    </div>
+
+    <!-- Cheese -->
+
+    <h2>Add Cheese</h2>
+
+    <div class="ingredient-panel">
+
+        <img
+            src="../images/cheese-layer.png"
+            class="ingredient-img"
+            onclick="addCheese()">
+
+    </div>
+
+    <!-- Toppings -->
+
+    <h2>Add Toppings</h2>
+
+    <div class="ingredient-panel">
+
+        <img
+            src="../images/pepperoni.png"
+            class="ingredient-img"
+            onclick="addTopping('pepperoni')">
+
+        <img
+            src="../images/mushroom.png"
+            class="ingredient-img"
+            onclick="addTopping('mushroom')">
+
+        <img
+            src="../images/olive.png"
+            class="ingredient-img"
+            onclick="addTopping('olive')">
+
+        <img
+            src="../images/veggie.png"
+            class="ingredient-img"
+            onclick="addTopping('veggie')">
+
+    </div>
+
+    <!-- Controls -->
+
+    <div class="controls">
+
+        <button
+            class="bake-btn"
+            onclick="bakePizza()">
+
+            🔥 Bake Pizza
+
+        </button>
+
+        <button
+            class="serve-btn"
+            onclick="servePizza()">
+
+            🍕 Serve Pizza
+
+        </button>
+
+        <button
+            class="reset-btn"
+            onclick="resetPizza()">
+
+            🔄 Reset
+
+        </button>
+
+    </div>
+
+    <!-- Cat Chef -->
+
+    <img
+        src="../images/cat-chef.png"
+        class="cat-chef"
+        alt="Cat Chef">
+
+    <!-- Sounds -->
+
+    <audio id="successSound">
+        <source
+            src="../sounds/win.mp3"
+            type="audio/mpeg">
+    </audio>
+
+    <audio id="bakeSound">
+        <source
+            src="../sounds/oven.mp3"
+            type="audio/mpeg">
+    </audio>
+
+    <!-- JavaScript -->
+
+    <script src="../js/pizza.js"></script>
+
+</body>
+</html>

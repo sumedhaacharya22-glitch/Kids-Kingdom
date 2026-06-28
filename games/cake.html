@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 Cake Factory Deluxe</title>
+
+    <link rel="stylesheet" href="../css/cake.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎂 Cake Factory Deluxe</h1>
+
+        <!-- Score -->
+        <div class="score-box">
+            Score: <span id="score">0</span>
+        </div>
+
+        <!-- Customer Order -->
+        <div class="order-box">
+            <h2>Customer Order</h2>
+            <p id="order">Loading Order...</p>
+        </div>
+
+        <!-- Cake Area -->
+        <div class="cake-display">
+
+            <!-- Main Cake -->
+            <img
+                src="../images/cake-base.png"
+                alt="Cake"
+                class="cake-base"
+                id="cakeBase"
+            >
+
+            <!-- Cream Added Here -->
+            <div id="cream-layer"></div>
+
+            <!-- Toppings Added Here -->
+            <div id="topping-layer"></div>
+
+        </div>
+
+        <!-- Cream Section -->
+        <h2 class="section-title">
+            Choose Cream
+        </h2>
+
+        <div class="ingredients">
+
+            <img
+                src="../images/vanilla-cream.png"
+                class="ingredient"
+                alt="Vanilla"
+                onclick="addCream('vanilla')"
+            >
+
+            <img
+                src="../images/chocolate-cream.png"
+                class="ingredient"
+                alt="Chocolate"
+                onclick="addCream('chocolate')"
+            >
+
+            <img
+                src="../images/strawberry-cream.png"
+                class="ingredient"
+                alt="Strawberry"
+                onclick="addCream('strawberry')"
+            >
+
+        </div>
+
+        <!-- Toppings -->
+        <h2 class="section-title">
+            Add Toppings
+        </h2>
+
+        <div class="ingredients">
+
+            <img
+                src="../images/cherry.png"
+                class="ingredient"
+                alt="Cherry"
+                onclick="addTopping('cherry')"
+            >
+
+            <img
+                src="../images/sprinkles.png"
+                class="ingredient"
+                alt="Sprinkles"
+                onclick="addTopping('sprinkles')"
+            >
+
+            <img
+                src="../images/cookie.png"
+                class="ingredient"
+                alt="Cookie"
+                onclick="addTopping('cookie')"
+            >
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button
+                class="serve-btn"
+                onclick="checkCake()"
+            >
+                ✅ Serve Cake
+            </button>
+
+            <button
+                class="reset-btn"
+                onclick="resetCake()"
+            >
+                🔄 Reset Cake
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="../js/cake.js"></script>
+
+</body>
+</html>

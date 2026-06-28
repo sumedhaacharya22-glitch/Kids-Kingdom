@@ -1,0 +1,124 @@
+/* ==========================
+   MYSTERY CHARACTER GAME
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:20px;
+}
+
+h1{
+    margin:20px 0;
+    font-size:3rem;
+    text-align:center;
+    text-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.game-box{
+    width:90%;
+    max-width:750px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.game-box h2{
+    margin-bottom:20px;
+}
+
+.clues{
+    margin:25px 0;
+    padding:20px;
+    background:rgba(255,255,255,0.1);
+    border-radius:15px;
+    font-size:1.2rem;
+    line-height:2;
+}
+
+.characters{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    gap:15px;
+    margin-top:25px;
+}
+
+.character{
+    background:white;
+    color:black;
+    border-radius:20px;
+    padding:20px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.character:hover{
+    transform:translateY(-8px) scale(1.05);
+}
+
+.character span{
+    display:block;
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+button{
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff4081;
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff2d55;
+    transform:scale(1.05);
+}
+
+.score{
+    margin-top:20px;
+    font-size:1.3rem;
+    font-weight:600;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    .game-box{
+        width:95%;
+        padding:20px;
+    }
+
+    .characters{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .character span{
+        font-size:2.5rem;
+    }
+}
